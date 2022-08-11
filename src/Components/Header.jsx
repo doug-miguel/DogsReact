@@ -2,18 +2,28 @@ import React from "react";
 import style from "./Header.module.css";
 
 import { Link } from "react-router-dom";
-import { Dogs } from "../Assets/dogs";
+import { Dog } from "../Assets/dog";
+
+import { UserContext } from "../Context/UserContext";
 
 const Header = () => {
+  const { data, userLogout } = React.useContext(UserContext);
   return (
     <header className={style.headers}>
       <nav className={`${style.logo} container`}>
         <Link className={style.logo} to="/" aria-label="Dogs - Home">
-          <Dogs />
+          <Dog />
         </Link>
-        <Link className={style.login} to="/login">
-          Login / Criar Login
-        </Link>
+        {data ? (
+          <Link className={style.login} to="/conta">
+            {data.nome}
+            <button onClick={userLogout}>Sair</button>
+          </Link>
+        ) : (
+          <Link className={style.login} to="/login">
+            Login / Criar Login
+          </Link>
+        )}
       </nav>
     </header>
   );

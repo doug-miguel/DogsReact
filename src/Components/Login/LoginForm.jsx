@@ -3,37 +3,19 @@ import { Link } from "react-router-dom";
 import Input from "../Form/Input";
 import Button from "../Form/Button";
 import useForm from "../../Hooks/useForm";
-import { TOKEN_POST, USER_GET } from "../../api";
+import { UserContext } from "../../Context/UserContext";
 
 const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  React.useEffect(() => {
-    const token = window.localStorage.getItem("token");
-    if (token) {
-      getUser(token);
-    }
-  }, []);
-
-  async function getUser(token) {
-    const { url, options } = USER_GET(token);
-    const FetchLogin = await fetch(url, options);
-    const response = await FetchLogin.json();
-  }
+  const { userLogin, error, loading } = React.useContext(UserContext);
 
   async function handleSubmit(event) {
     event.preventDefault();
 
     if (username.validate() && password.validate()) {
-      const { url, options } = TOKEN_POST({
-        username: username.value,
-        password: password.value,
-      });
-      const FetchToken = await fetch(url, options);
-      const response = await FetchToken.json();
-      window.localStorage.setItem("token", response.token);
-      getUser(response.token);
+      userLogin(username.value, password.value);
     }
   }
 
@@ -43,7 +25,13 @@ const LoginForm = () => {
       <form action="" onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
-        <Button>Entrar</Button>
+        {loading ? (
+          <Button disabled>Carregando...</Button>
+        ) : (
+          <Button>Entrar</Button>
+        )}
+
+        {error && <p>{error}</p>}
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>
