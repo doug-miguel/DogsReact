@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const enviar = () => (
+export const Enviar = () => (
   <svg
     width={43}
     height={31}

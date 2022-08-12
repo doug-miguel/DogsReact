@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const estatisticas = () => (
+export const Estatisticas = () => (
   <svg
     width={28}
     height={28}
