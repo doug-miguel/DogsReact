@@ -11,16 +11,17 @@ import { PHOTOS_GET } from "../../Api/api";
 
 import style from "./FeedPhotos.module.css";
 
-const FeedPhoto = ({ setModalPhoto }) => {
+const FeedPhoto = ({ setModalPhoto, user, page, setInfinit }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
     async function fetchPhoto() {
-      const { url, options } = PHOTOS_GET({ page: 1, total: 7, user: 0 });
+      const { url, options } = PHOTOS_GET({ page, total: 6, user });
       const { response, json } = await request(url, options);
+      if (response && response.ok && json.length < 6) setInfinit(false);
     }
     fetchPhoto();
-  }, [request]);
+  }, [request, user, setInfinit, page]);
 
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
