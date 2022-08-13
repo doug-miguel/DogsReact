@@ -12,7 +12,6 @@ const PhotoComments = ({ id, commentPhoto }) => {
 
   React.useEffect(() => {
     commentsSection.current.scrollTop = commentsSection.current.scrollHeight;
-    console.log("🚀 ~ file: PhotoComments.jsx ~ line 15 ~ React.useEffect ~ commentsSection.current.scrollHeight", commentsSection.current.scrollHeight)
   }, [comments]);
 
   return (
