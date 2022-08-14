@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import Head from "../../Helper/Head";
 
 import style from "./UserHeader.module.css";
 
@@ -24,6 +25,7 @@ const UserHeader = () => {
 
   return (
     <header className={style.header}>
+      <Head title={title} />
       <h1 className="title">{title}</h1>
       <UserHeaderNav />
     </header>

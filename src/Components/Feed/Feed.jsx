@@ -2,7 +2,7 @@ import React from "react";
 import FeedModal from "./FeedModal";
 import FeedPhotos from "./FeedPhotos";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
@@ -31,7 +31,7 @@ const Feed = ({ user }) => {
       window.removeEventListener("scroll", infiniteScroll);
     };
   }, [infinit]);
-  
+
   return (
     <div>
       {modalPhoto && (
@@ -60,6 +60,5 @@ Feed.propTypes = {
     PropTypes.number.isRequired,
   ]),
 };
-
 
 export default Feed;
