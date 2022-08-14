@@ -2,6 +2,8 @@ import React from "react";
 import FeedModal from "./FeedModal";
 import FeedPhotos from "./FeedPhotos";
 
+import PropTypes from 'prop-types';
+
 const Feed = ({ user }) => {
   const [modalPhoto, setModalPhoto] = React.useState(null);
   const [pages, setPages] = React.useState([1]);
@@ -10,7 +12,7 @@ const Feed = ({ user }) => {
   React.useEffect(() => {
     let wait = false;
     function infiniteScroll() {
-        if (infinit) {
+      if (infinit) {
         const scroll = window.scrollY;
         const height = document.body.offsetHeight - window.innerHeight;
         if (scroll > height * 0.8 && !wait) {
@@ -29,6 +31,7 @@ const Feed = ({ user }) => {
       window.removeEventListener("scroll", infiniteScroll);
     };
   }, [infinit]);
+  
   return (
     <div>
       {modalPhoto && (
@@ -46,5 +49,17 @@ const Feed = ({ user }) => {
     </div>
   );
 };
+
+Feed.defaultProps = {
+  user: 0,
+};
+
+Feed.propTypes = {
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ]),
+};
+
 
 export default Feed;

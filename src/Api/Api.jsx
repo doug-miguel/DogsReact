@@ -83,6 +83,13 @@ export function PHOTO_GET(id) {
   };
 }
 
+export function PHOTOS_GET_ONE(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+  };
+}
+
+
 export function COMMENT_POST(id, token, body) {
   return {
     url: `${API_URL}/api/comment/${id}`,
@@ -108,3 +115,5 @@ export function PHOTO_DELETE(id, token) {
     },
   };
 }
+
+
