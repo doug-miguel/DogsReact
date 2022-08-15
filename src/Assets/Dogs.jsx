@@ -1,13 +1,7 @@
 import * as React from "react";
 
-export const Dog = () => (
-  <svg
-    width={28}
-    height={22}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    
-  >
+export const Dogs = () => (
+  <svg width={28} height={22} fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"
       clipRule="evenodd"
