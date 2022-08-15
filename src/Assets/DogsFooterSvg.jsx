@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const DogsFooter = () => (
+export const DogsFooterSvg = () => (
   <svg width={28} height={22} fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       fillRule="evenodd"

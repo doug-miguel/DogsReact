@@ -2,7 +2,7 @@ import React from "react";
 
 import { COMMENT_POST } from "../../Api";
 
-import { Enviar } from "../../Assets/Enviar";
+import { EnviarSvg } from "../../Assets/EnviarSvg";
 
 import Error from "../../Helper/Error";
 
@@ -41,7 +41,7 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
         onChange={({ target }) => setComment(target.value)}
       />
       <button className={style.button}>
-        <Enviar />
+        <EnviarSvg />
       </button>
       <Error error={error} />
     </form>

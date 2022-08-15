@@ -2,12 +2,12 @@ import React from "react";
 
 import style from "./Footer.module.css";
 
-import { DogsFooter } from "../Assets/DogsFooter";
+import { DogsFooterSvg } from "../Assets/DogsFooterSvg";
 
 const Footer = () => {
   return (
     <footer className={style.footer}>
-      <DogsFooter />
+      <DogsFooterSvg />
       <p>Dogs. Alguns direitos reservados.</p>
     </footer>
   );

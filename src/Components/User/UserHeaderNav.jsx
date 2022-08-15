@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Sair } from "../../Assets/sair";
+import { ExitSvg } from "../../Assets/ExitSvg";
 import { FeedSvg } from "../../Assets/FeedSvg";
 import { AddSvg } from "../../Assets/AddSvg";
-import { Estatisticas } from "../../Assets/Estatisticas";
+import { StatsSvg } from "../../Assets/StatsSvg";
 import { UserContext } from "../../Context/UserContext";
 
 import style from "./UserHeaderNav.module.css";
@@ -41,7 +41,7 @@ const UserHeaderNav = () => {
           {mobile && "Minhas Fotos"}
         </NavLink>
         <NavLink to="/conta/estatisticas">
-          <Estatisticas />
+          <StatsSvg />
           {mobile && "Estatísticas"}
         </NavLink>
         <NavLink to="/conta/postar">
