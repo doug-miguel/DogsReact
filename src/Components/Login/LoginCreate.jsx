@@ -1,5 +1,5 @@
 import React from "react";
-import { USER_POST } from "../../Api/api";
+import { USER_POST } from "../../Api";
 import { UserContext } from "../../Context/UserContext";
 import Error from "../../Helper/Error";
 import Head from "../../Helper/Head";

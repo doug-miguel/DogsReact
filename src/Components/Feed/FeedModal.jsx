@@ -1,5 +1,5 @@
 import React from "react";
-import { PHOTO_GET } from "../../Api/api";
+import { PHOTO_GET } from "../../Api";
 import Error from "../../Helper/Error";
 import Loading from "../../Helper/Loading";
 import useFetch from "../../Hooks/useFetch";

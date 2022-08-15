@@ -6,7 +6,7 @@ import Button from "../Form/Button";
 import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 
-import { PASSWORD_LOST } from "../../Api/api";
+import { PASSWORD_LOST } from "../../Api";
 
 import Error from "../../Helper/Error";
 import Head from "../../Helper/Head";

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { STATS_GET } from "../../Api/api";
+import { STATS_GET } from "../../Api";
 
 import useFetch from "../../Hooks/useFetch";
 

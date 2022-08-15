@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { PHOTOS_GET_ONE } from "../../Api/api";
+import { PHOTOS_GET_ONE } from "../../Api";
 import Error from "../../Helper/Error";
 import Head from "../../Helper/Head";
 import Loading from "../../Helper/Loading";
@@ -10,7 +10,6 @@ import PhotoContent from "./PhotoContent";
 const Photo = () => {
   const { id } = useParams();
   const { data, loading, error, request } = useFetch();
-  console.log("🚀 ~ file: Photo.jsx ~ line 13 ~ Photo ~ data", data);
 
   React.useEffect(() => {
     const { url } = PHOTOS_GET_ONE(id);

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { COMMENT_POST } from "../../Api/api";
+import { COMMENT_POST } from "../../Api";
 
 import { Enviar } from "../../Assets/Enviar";
 

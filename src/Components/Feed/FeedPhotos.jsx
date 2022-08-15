@@ -7,7 +7,7 @@ import useFetch from "../../Hooks/useFetch";
 import Error from "../../Helper/Error";
 import Loading from "../../Helper/Loading";
 
-import { PHOTOS_GET } from "../../Api/api";
+import { PHOTOS_GET } from "../../Api";
 
 import style from "./FeedPhotos.module.css";
 

@@ -3,7 +3,7 @@ import React from "react";
 import style from "./PhotoDelete.module.css";
 
 import useFetch from "../../Hooks/useFetch";
-import { PHOTO_DELETE } from "../../Api/api";
+import { PHOTO_DELETE } from "../../Api";
 import { useNavigate } from "react-router-dom";
 
 const PhotoDelete = ({ id }) => {
