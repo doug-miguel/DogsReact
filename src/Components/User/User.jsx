@@ -6,7 +6,7 @@ import Feed from "../Feed/Feed";
 import NotFound from "../NotFound";
 import UserHeader from "./UserHeader";
 import UserPhotoPost from "./UserPhotoPost";
-import UserStarts from "./UserStarts";
+import UserStarts from "./UserStats";
 
 const User = () => {
   const { data } = React.useContext(UserContext);
