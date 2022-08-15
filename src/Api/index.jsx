@@ -1,4 +1,4 @@
-export const API_URL = "https://dogsapi.origamid.dev/json";
+export const API_URL = import.meta.env.VITE_API_URL;
 
 export function TOKEN_POST(body) {
   return {
@@ -130,11 +130,11 @@ export function PASSWORD_LOST(body) {
 
 export function PASSWORD_RESET(body) {
   return {
-    url: API_URL + '/api/password/reset',
+    url: API_URL + "/api/password/reset",
     options: {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
     },
@@ -143,11 +143,11 @@ export function PASSWORD_RESET(body) {
 
 export function STATS_GET() {
   return {
-    url: API_URL + '/api/stats',
+    url: API_URL + "/api/stats",
     options: {
-      method: 'GET',
+      method: "GET",
       headers: {
-        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+        Authorization: "Bearer " + window.localStorage.getItem("token"),
       },
     },
   };

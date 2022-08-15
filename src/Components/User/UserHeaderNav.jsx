@@ -49,7 +49,7 @@ const UserHeaderNav = () => {
           {mobile && "Adicionar Fotos"}
         </NavLink>
         <button onClick={userLogout}>
-          <Sair />
+          <ExitSvg />
           {mobile && "Sair"}
         </button>
       </nav>
