@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Sair } from "../../Assets/sair";
 import { FeedSvg } from "../../Assets/FeedSvg";
-import { Adicionar } from "../../Assets/Adicionar";
+import { AddSvg } from "../../Assets/AddSvg";
 import { Estatisticas } from "../../Assets/Estatisticas";
 import { UserContext } from "../../Context/UserContext";
 
@@ -45,7 +45,7 @@ const UserHeaderNav = () => {
           {mobile && "Estatísticas"}
         </NavLink>
         <NavLink to="/conta/postar">
-          <Adicionar />
+          <AddSvg />
           {mobile && "Adicionar Fotos"}
         </NavLink>
         <button onClick={userLogout}>
